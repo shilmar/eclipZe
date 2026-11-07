@@ -1,0 +1,123 @@
+# ====================================================================
+# .gitignore para eclipZe (Nikon Z5 II & D750 Eclipse Sequencer)
+# ====================================================================
+
+# --- Python & Entornos Virtuales ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.pyo
+
+# Entornos virtuales locales
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+python/
+
+# Testing, Cobertura y Linters
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+
+# Pruebas con capturas locales pesadas
+tests/eclipse_*/
+tests/test_eclipse_*/
+
+# --- Borradores y Desarrollo Temporal ---
+scratch/
+
+# --- Caché local y salidas generadas por la aplicación ---
+# Caché de teselas y metadatos de mapas (conserva solo la carpeta)
+maps_cache/*
+!maps_cache/.gitkeep
+
+# Planes de respaldo exportados por el usuario
+plans/*
+!plans/.gitkeep
+
+# Logs y registros de ejecución
+logs/
+*.log
+*.bak
+*.tmp
+*.temp
+*.crash
+
+# --- Fotos y Capturas de Cámara (evita saturar el repositorio) ---
+*.nef
+*.NEF
+*.cr2
+*.cr3
+*.arw
+*.dng
+*.DNG
+*.tif
+*.tiff
+*.raw
+*.RAW
+*.dat
+
+# Directorios de previsualizaciones y descargas de cámaras
+Win_DRV/*/preview/*
+!Win_DRV/*/preview/.gitkeep
+
+# --- Compilación C++ / Visual Studio (MSVC) ---
+.vs/
+*.obj
+*.pdb
+*.idb
+*.ilk
+*.tlog
+*.res
+*.iobj
+*.ipdb
+*.recipe
+*.lastbuildstate
+
+# Carpetas intermedias generadas por MSBuild
+Win_DRV/**/x64/
+Win_DRV/**/Debug/
+Win_DRV/**/Release/
+Win_DRV/SampleApp/TestApp/
+
+# Ficheros de depuración / enlace C++ en carpetas de drivers
+Win_DRV/*/*.pdb
+Win_DRV/*/*.lib
+Win_DRV/*/*.exp
+
+# --- Editores y Sistema Operativo ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# --- EXCEPCIONES: Binarios requeridos de Nikon SDK ---
+# Asegura que Git no ignore los binarios ni librerías necesarias para ejecutar la app
+!Win_DRV/Nikon_Z/TestApp.exe
+!Win_DRV/Nikon_Z/*.dll
+!Win_DRV/Nikon_Z/*.config
+!Win_DRV/Nikon_D750/Type0015Ctrl.exe
+!Win_DRV/Nikon_D750/Type0015.md3
+!Win_DRV/Nikon_D750/*.dll

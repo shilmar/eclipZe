@@ -1,0 +1,3 @@
+"""
+eclipZe tests package.
+"""
